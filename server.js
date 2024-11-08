@@ -8,14 +8,6 @@ app.use(express.json());
 app.use(express.urlencoded ({ extended: true }));
 
 
-app.post('/user', (req, res) => {
-    console.log('req.body:', req.body);  // Check if body is parsed correctly
-    if (!req.body || !req.body.name) {
-      return res.status(400).json({ message: 'Name is required' });
-    }
-    // Process the request
-  });
-
 
 app.use('/api', authRoutes);
 
